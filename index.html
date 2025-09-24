@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Presente Especial para Você</title>
+    
+    <!-- Favicon de Presente -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎁</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F1A; /* Fundo de fallback */
+        }
+
+        /* Efeito de brilho no avatar */
+        .avatar-glow {
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.7), 0 0 30px rgba(236, 72, 153, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.3);
+        }
+
+        /* Gradiente para o botão principal */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #EC4899 0%, #A855F7 100%);
+        }
+
+        /* Animação de pulso para o botão principal */
+        @keyframes pulse-strong {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px rgba(217, 70, 239, 0.8);
+            }
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- Container Principal com Fundo Dinâmico -->
+    <div class="relative min-h-screen overflow-hidden">
+
+        <!-- Fundo com Imagem Desfocada e Escurecida -->
+        <div class="absolute inset-0 w-full h-full bg-cover bg-center" 
+             style="background-image: url('/img.jpg'); filter: blur(12px) brightness(0.5); transform: scale(1.2);">
+        </div>
+        
+        <!-- Conteúdo da Página -->
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-screen p-6">
+            
+            <!-- Foto de Perfil -->
+            <div class="relative mb-4">
+                 <img 
+                    src="/img.jpg" 
+                    alt="Foto de Perfil"
+                    class="w-40 h-40 rounded-full border-4 border-white object-cover avatar-glow"
+                    onerror="this.onerror=null; this.src='https://placehold.co/200x200/f0abfc/4a044e?text=Erro';"
+                >
+            </div>
+
+            <!-- Nome/Título -->
+            <h1 class="text-4xl font-bold text-pink-400 mb-2">Obranca</h1>
+            
+            <!-- Título Principal -->
+            <h2 class="text-2xl md:text-3xl font-black text-center max-w-lg mb-2">
+                Um presentinho especial você
+            </h2>
+            
+            <!-- Subtítulo -->
+            <p class="text-gray-300 text-center mb-8">
+                Prontinho para alegrar o seu dia. ✨<br>Clique no botão abaixo para receber seu presente.
+            </p>
+
+            <!-- Botão Principal de Resgate -->
+            <a 
+                href="https://t.me/obranca" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="w-full max-w-md text-center text-white font-bold text-xl py-4 px-8 rounded-xl shadow-lg btn-gradient transition-all duration-300 ease-in-out mb-6"
+                style="animation: pulse-strong 2s infinite;"
+            >
+                🎁 TELEGRAM 🎁
+            </a>
+
+            <!-- Botões Secundários -->
+            <div class="w-full max-w-md grid grid-cols-1 gap-4">
+                <!-- Botão Telegram 
+                <a href="https://t.me/obranca" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-gray-800/70 backdrop-blur-sm hover:bg-gray-700/80 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.162.015-.088.03-.174.028-.258a.105.105 0 0 0-.027-.05s-.011-.01-.024-.012l-.002-.002-
+.002-.002-.001-.002c-.003 0-.005-.001-.007-.001-.011 0-.024 0-.037.002s-.023.008-.034.017c-.011.009-.02.02-.026.03-.006.01-.01.024-.013.038-.002.012-.004.024-.004.037s0 .024.001.036c0 .012.002.023.002.034a.078.078 0 0 1-.003.042c-.003.012-.007.023-.012.033s-.011.02-.019.028c-.008.009-.018.015-.029.02a.14.14 0 0 1-.032.013c-.012.004-.025.006-.039.007s-.028.002-.043.002c-.015 0-.03-.001-.044-.003a1.01 1.01 0 0 1-.052-.01z"/>
+                    </svg>
+                    <span>Telegram</span>
+                </a>
+                -->
+                <!-- Botão TikTok -->
+                <a href="https://www.tiktok.com/@hemibram" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 bg-gray-800/70 backdrop-blur-sm hover:bg-gray-700/80 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3V0Z"/>
+                    </svg>
+                    <span>TikTok</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
